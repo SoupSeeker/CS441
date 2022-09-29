@@ -1,3 +1,3 @@
 # CS441
-## Get familiar with Odoo
-## https://github.com/odoo/documentation
+
+## Odoo documentation: https://github.com/odoo/documentation

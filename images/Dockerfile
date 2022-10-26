@@ -1,0 +1,1 @@
+FROM odoo:latest

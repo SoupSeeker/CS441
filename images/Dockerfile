@@ -1,2 +1,2 @@
 FROM odoo:latest
-ADD ../../addons /mnt/extra-addons
+COPY ../../addons /mnt/extra-addons

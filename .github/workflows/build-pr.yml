@@ -17,6 +17,8 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+      
+      - run: git lfs pull
 
       # setup Docker buld action
       - name: Set up Docker Buildx

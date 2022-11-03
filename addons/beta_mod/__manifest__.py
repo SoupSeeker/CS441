@@ -3,15 +3,14 @@
     'name': "beta_mod",
 
     'summary': """
-        Short (1 phrase/line) summary of the module's purpose, used as
-        subtitle on modules listing or apps.openerp.com""",
+         A customized point of sale for Nemo Inc. (CSUSM CS441 Project Fall 2022)""",
 
     'description': """
-        Long description of module's purpose
+        A customized point of sale for Nemo
     """,
 
-    'author': "My Company",
-    'website': "http://www.yourcompany.com",
+    'author': "Nemo Inc.",
+    'website': "https://github.com/soupseeker/cs441",
 
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/15.0/odoo/addons/base/data/ir_module_category_data.xml
@@ -20,7 +19,9 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base'],
+    # 
+    # added point_of_sale, maybe we can get it preinstalled and preactivated with -i --init tags?
+    'depends': ['base', 'point_of_sale'],
 
     # always loaded
     'data': [

@@ -21,7 +21,8 @@
     # any module necessary for this one to work correctly
     # 
     # added point_of_sale, maybe we can get it preinstalled and preactivated with -i --init tags?
-    'depends': ['base', 'point_of_sale'],
+    # update: tried adding point_of_sale as depends, whole thing took a dump
+    'depends': ['base'],
 
     # always loaded
     'data': [

@@ -45,9 +45,9 @@ jobs:
           file: ./images/Dockerfile
           context: .
           # Note: tags has to be all lower-case
-          tags: soupseeker/nemo:latest
+          tags: soupseeker/nemo:$(date +%Y%m%d%H%M%S)
           # build on feature branches, push only on main branch
-          push: false
+          push: true
           no-cache: true
 
       - name: Image digest

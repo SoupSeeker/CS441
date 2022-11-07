@@ -19,6 +19,9 @@ jobs:
         uses: actions/checkout@v3
       
       - run: git lfs pull
+      
+      - name: Get branch name
+        run: echo "BRANCH=${GITHUB_REF##*/}" >> $GITHUB_ENV
 
       # setup Docker buld action
       - name: Set up Docker Buildx
@@ -44,13 +47,11 @@ jobs:
           # relative path to the place where source code with Dockerfile is located
           file: ./images/Dockerfile
           context: .
-          # Note: tags has to be all lower-case
-          tags: soupseeker/nemo:"$BRANCH_NAME"
-          # build on feature branches, push only on main branch
           push: true
           no-cache: true
-        env:
-          BRANCH_NAME: ${GITHUB_REF##*/}
+          tags: soupseeker/nemo:${{ env.BRANCH }}
+          build-args: |
+            BRANCH=${{ env.BRANCH }}
         
 
       - name: Image digest

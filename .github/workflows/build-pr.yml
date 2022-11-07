@@ -45,10 +45,13 @@ jobs:
           file: ./images/Dockerfile
           context: .
           # Note: tags has to be all lower-case
-          tags: "soupseeker/nemo:${GITHUB_REF##*/}"
+          tags: soupseeker/nemo:$BRANCH_NAME
           # build on feature branches, push only on main branch
           push: true
           no-cache: true
+        env:
+          BRANCH_NAME: ${GITHUB_REF##*/}
+        
 
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}

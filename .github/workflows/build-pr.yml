@@ -47,7 +47,7 @@ jobs:
           # Note: tags has to be all lower-case
           tags: soupseeker/nemo:latest
           # build on feature branches, push only on main branch
-          push: true
+          push: false
           no-cache: true
 
       - name: Image digest

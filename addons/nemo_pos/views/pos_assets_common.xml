@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+<template id="nemo_pos.assets_common" name="POS Assets Common">
+    <t t-call-assets="nemo_pos.pos_assets_backend_style" t-js="false"/>
+    <t t-call-assets="nemo_pos.assets" t-js="false" />
+    <t t-call-assets="web.assets_common" t-css="false" />
+    <t t-call-assets="nemo_pos.pos_assets_backend" t-css="false" />
+    <t t-call-assets="nemo_pos.assets" t-css="false" />
+</template>
+
+</odoo>

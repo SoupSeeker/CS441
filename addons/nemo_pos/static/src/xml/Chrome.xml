@@ -8,9 +8,9 @@
                 <div t-if="tempScreen.isShown" class="block-top-header" />
                 <div class="pos-branding" t-if= "!env.isMobile">
                     <img class="pos-logo" t-on-click="trigger('toggle-debug-widget')"
-                         src="/nemo_pos/static/src/img/logo.png" alt="Logo" />
+                         src="/nemo_pos/static/src/img/nemo.png" alt="Logo" />
                     <CashMoveButton t-if="showCashMoveButton()" />
-                    <TicketButton isTicketScreenShown="isTicketScreenShown" />
+                    
                 </div>
                 <div class="pos-rightheader">
                     <CashMoveButton t-if="showCashMoveButton() and env.isMobile and !state.mobileSearchBarIsShown" />

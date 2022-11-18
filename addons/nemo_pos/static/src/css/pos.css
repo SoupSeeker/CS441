@@ -7,7 +7,7 @@
 
 /* --- Styling of OpenERP Elements --- */
 .ui-dialog, .modal-dialog {
-    background: white;
+    background: red;
     padding: 10px;
     border-radius: 3px;
     font-family: sans-serif;
@@ -326,7 +326,7 @@ td {
     margin:0;
     padding:0;
     color: gray;
-    background: #875A7B;
+    background: orange;
     display: flex;
 }
 
@@ -583,14 +583,14 @@ td {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    max-width: 500px;
+    max-width: 650px;
 }
 
-.pos .leftpane .pads {
-    border-top: solid 3px rgb(110, 200, 155);
+.pos .rightpane .pads {
+    border-top: solid 3px orange; /*change from rgb(110, 200, 155)*/
 }
 
-.pos .leftpane .pads .subpads {
+.pos .rightpane .pads .subpads { /*change to rightpane from leftpane*/
     display: flex;
     flex-direction: row;
 }
@@ -739,8 +739,8 @@ td {
     font-size: 32px;
     line-height: var(--btn-height-size);
     padding-top: 6px;
-    background: rgb(86, 86, 86);
-    color: white;
+    background: orange; /*change from rgb(86, 86, 86)*/
+    color: white; /*change from white*/
     width: 60px;
     margin: auto;
     border-radius: 30px;
@@ -834,7 +834,7 @@ td {
 }
 .pos .mode-button.selected-mode {
     color: white;
-    background: #6EC89B;
+    background: orange;
     border-color: transparent;
 }
 .pos .mode-button.selected-mode:hover {
@@ -886,7 +886,7 @@ td {
 }
 
 .pos .green-border-bottom {
-    border-bottom: solid 3px rgb(110, 200, 155);
+    border-bottom: solid 3px orange; /*change from rgb(110, 200, 155)*/
 }
 
 .pos .grey-border-bottom {
@@ -1619,7 +1619,7 @@ td {
     text-align: center;
     padding: 24px 0px 18px;
     font-size: 64px;
-    color: #43996E;
+    color: orange; /*change from green*/
     text-shadow: 0px 2px white, 0px 2px 2px rgba(0, 0, 0, 0.27);
 }
 .payment-screen .paymentlines-empty .message {
@@ -2069,8 +2069,8 @@ td {
     padding-bottom: 8px;
     padding-top: 8px;
     font-size: 16px;
-    text-align: left;
-    max-width: 500px;
+    text-align: left; 
+    max-width: 650px;
     -webkit-transform: translate3d(0,0,0);
 }
 

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="AddProductPopup" owl="1">
+        <div role="dialog" class="modal-dialog">
+            <div class="popup product-info-popup">
+                <header class="title">
+                    Add Product
+                </header>
+                <main class="body">
+                    <div class="section-product-info-title">
+                        Sicko Mode
+                    </div>
+                </main>
+                <footer class="footer">
+                    <div class="button cancel" t-on-click="cancel">
+                        Close
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </t>
+</templates>

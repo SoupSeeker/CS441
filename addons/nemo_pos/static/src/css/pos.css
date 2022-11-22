@@ -583,7 +583,7 @@ td {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    max-width: 650px;
+    max-width: 50%; /*change from 650px*/
 }
 
 .pos .rightpane .pads {
@@ -790,27 +790,29 @@ td {
     width: 216px;
     margin: 16px;
     margin-top: 8px;
-    margin-left: 0px;
+    margin-left: 10px;/*change from 0px*/
     border: none;
     border-radius: 0;
-    border-top: 1px solid;
+    border-top: none; /*change from 1px solide*/
     border-color: #bfbfbf;
     border-top-right-radius: 4px;
     min-width: 216px;
 }
 .pos .numpad button {
-    float: left/*rtl:ignore*/; /* rtlcss forced to keep ltr */
+    /*float: left/*rtl:ignore*/ /* rtlcss forced to keep ltr */
     height: 54px;
     width: 54px;
     font-weight: bold;
     vertical-align: middle;
     color: #555555;
-    border-radius: 0;
-    border: none;
+    border-radius: 50%; /*change from 0*/
+    border: thin solid black; /*change from none -- thin*/
     border-right: 1px solid;
     border-bottom: 1px solid;
     border-color: #bfbfbf;
     transition: all 150ms linear;
+    margin-left: 1px;
+
 }
 .pos .numpad button:hover {
     background: #efefef;

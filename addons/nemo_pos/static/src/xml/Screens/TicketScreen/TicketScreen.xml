@@ -4,7 +4,7 @@
     <t t-name="TicketScreen" owl="1">
         <div class="ticket-screen screen" t-att-class="{ oe_hidden: !props.isShown }">
             <div class="screen-full-width">
-                <div class="rightpane pane-border">
+                <div class="leftpane pane-border"> <!-- Had to switch rightpane for leftpane -->
                     <div class="controls">
                         <t t-if="!env.isMobile || !state.showSearchBar">
                             <div class="buttons">
@@ -109,7 +109,7 @@
                         </t>
                     </div>
                 </div>
-                <div class="leftpane">
+                <div class="rightpane"> <!-- Had to switch leftpane for rightpane -->
                     <t t-set="_selectedSyncedOrder" t-value="getSelectedSyncedOrder()" />
                     <t t-set="_selectedOrderlineId" t-value="getSelectedOrderlineId()" />
                     <OrderDetails order="_selectedSyncedOrder" selectedOrderlineId="_selectedOrderlineId" highlightHeaderNote="_state.ui.highlightHeaderNote" />

@@ -3,8 +3,9 @@ odoo.define('nemo_pos.AddProductPopup', function(require) {
 
     const AbstractAwaitablePopup = require('nemo_pos.AbstractAwaitablePopup');
     const Registries = require('nemo_pos.Registries');
-    const { posbus } = require('nemo_pos.utils')
-    const { ConnectionLostError } = require('@web/core/network/rpc_service')
+    const { posbus } = require('nemo_pos.utils');
+    const { ConnectionLostError } = require('@web/core/network/rpc_service');
+    const { parse } = require('web.field_utils');
 
     /**
      * This popup needs to be self-dependent because it needs to be called from different place. In order to avoid code
@@ -15,6 +16,53 @@ odoo.define('nemo_pos.AddProductPopup', function(require) {
      *  }
      */
     class AddProductPopup extends AbstractAwaitablePopup {
+        setup() {
+            this.state = owl.hooks.useState({
+                inputName: '',
+                inputBarcode: '',
+                inputPrice: '',
+                inputHasError: false,
+            });
+            this.inputNameRef = owl.hooks.useRef('product-name-ref');
+            this.inputBarcodeRef = owl.hooks.useRef('product-barcode-ref');
+            this.inputPriceRef = owl.hooks.useRef('product-price-ref');
+        }
+        confirm() {
+            if(this.state.inputName == ''){
+                this.state.inputHasError = true;
+                this.errorMessage = this.env._t('No name provided');
+                return;
+            }
+            if (this.state.inputBarcode == '') {
+                this.state.inputHasError = true;
+                this.errorMessage = this.env._t('No barcode provided');
+                return;
+            }
+            if (this.state.inputPrice == '') {
+                this.state.inputHasError = true;
+                this.errorMessage = this.env._t('No price provided');
+                return;
+            }
+            try {
+                parse.float(this.state.inputPrice);
+            } catch (error) {
+                this.state.inputHasError = true;
+                this.errorMessage = this.env._t('Invalid price');
+                return;
+            }
+
+            return super.confirm();
+        }
+        /* Overwriting the getPayload() from AbstractAwaitablePopup.js file, this is what is returned when we confirm*/
+        getPayload() {
+            return {
+                name: this.state.inputName,
+                barcode: this.state.inputBarcode,
+                price: parse.float(this.state.inputPrice),
+            };
+        }
+
+
         constructor() {
             super(...arguments);
             Object.assign(this, this.props.info);
@@ -41,9 +89,7 @@ odoo.define('nemo_pos.AddProductPopup', function(require) {
                 }
             }
         }
-
     }
-
     AddProductPopup.template = 'AddProductPopup';
     Registries.Component.add(AddProductPopup);
 });

@@ -679,7 +679,7 @@
 
     <menuitem
         id="menu_pos_config_pos"
-        name="Point of Sale"
+        name="Nemo Point of Sale"
         parent="menu_point_config_product"
         sequence="1"
         action="action_pos_config_pos"

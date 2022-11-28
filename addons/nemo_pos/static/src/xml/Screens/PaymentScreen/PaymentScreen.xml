@@ -26,6 +26,7 @@
                                 <PaymentScreenStatus paymentLines="paymentLines" />
                             </section>
                         </t>
+
                         <div class="paymentmethods-container">
                             <PaymentScreenPaymentLines paymentLines="paymentLines" />
                             <div class="paymentmethods">
@@ -35,6 +36,7 @@
                                 </t>
                             </div>
                         </div>
+                        <span class="payment-note">Where should this payment be stored?</span>
                     </div>
                     <div class="right-content">
                         <t t-if="!env.isMobile">

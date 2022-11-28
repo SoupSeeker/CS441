@@ -375,7 +375,7 @@ td {
     overflow-x: auto;
 }
 .pos .pos-rightheader > * {
-    border-right: 1px solid #875A7B;
+    border-right: 0px solid #875A7B;
 }
 
 .pos .status-buttons-portal {
@@ -583,7 +583,7 @@ td {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    max-width: 650px;
+    max-width: 50%; /*change from 650px*/
 }
 
 .pos .rightpane .pads {
@@ -593,6 +593,7 @@ td {
 .pos .rightpane .pads .subpads { /*change to rightpane from leftpane*/
     display: flex;
     flex-direction: row;
+    flex: 1;
 }
 
 /*  ********* The control buttons ********* */
@@ -654,7 +655,7 @@ td {
 
 .pos .control-button.highlight,
 .pos .button.highlight {
-    background: #6EC89B !important;
+    background: #ffa500 !important;
     border: solid 1px #64AF8A !important;
     color: white !important;
 }
@@ -681,18 +682,16 @@ td {
     margin-top: 8px;
     margin-right: 0;
     text-align: center;
-    vertical-align: top;
+    vertical-align: middle;
     border: none;
     border-radius: 0;
     border-top: 1px solid;
     border-left: 1px solid;
     border-color: #bfbfbf;
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
     flex-grow: 1;
 }
 .pos .actionpad .button {
-    --btn-height-size: 54px;
+    --btn-height-size: 35%;
     position: relative;
     display: block;
     height: var(--btn-height-size);
@@ -700,7 +699,7 @@ td {
     font-weight: bold;
     vertical-align: middle;
     color: #555555;
-    font-size: 14px;
+    font-size: 16px;
     border-radius: 0;
     border: none;
     border-right: 1px solid;
@@ -729,9 +728,9 @@ td {
 .pos .actionpad .button.pay {
     height: calc(var(--btn-height-size) * 3);
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 700px) {
     .pos .actionpad .button.pay {
-        height: calc(var(--btn-height-size) * 2);
+        height: calc(var(--btn-height-size) * 3);
     }
 }
 .pos .actionpad .button.pay .pay-circle {
@@ -753,6 +752,7 @@ td {
 }
 
 .pos .actionpad .button.set-customer{
+    display: none;
     padding-left: 40px;
     padding-right: 40px;
 }
@@ -787,30 +787,32 @@ td {
 
 .pos .numpad {
     text-align: center;
-    width: 216px;
+    width: 35%;
     margin: 16px;
     margin-top: 8px;
-    margin-left: 0px;
+    margin-left: 10px;/*change from 0px*/
     border: none;
     border-radius: 0;
-    border-top: 1px solid;
+    border-top: none; /*change from 1px solide*/
     border-color: #bfbfbf;
     border-top-right-radius: 4px;
-    min-width: 216px;
+    min-width: 30%;
 }
 .pos .numpad button {
-    float: left/*rtl:ignore*/; /* rtlcss forced to keep ltr */
+    /*float: left/*rtl:ignore*/ /* rtlcss forced to keep ltr */
     height: 54px;
     width: 54px;
     font-weight: bold;
     vertical-align: middle;
     color: #555555;
-    border-radius: 0;
-    border: none;
+    border-radius: 50%; /*change from 0*/
+    border: thin solid white; /*change from none -- thin*/
     border-right: 1px solid;
     border-bottom: 1px solid;
     border-color: #bfbfbf;
     transition: all 150ms linear;
+    margin-left: 1px;
+
 }
 .pos .numpad button:hover {
     background: #efefef;
@@ -825,6 +827,7 @@ td {
 }
 .pos .numpad button:last-child {
     border-bottom-right-radius: 4px;
+    background: orange;
 }
 .pos .input-button {
     font-size: 24px;
@@ -838,7 +841,7 @@ td {
     border-color: transparent;
 }
 .pos .mode-button.selected-mode:hover {
-    background: #6EC89B;
+    background: #0057ff;
     color: white;
     border-color: transparent;
 }
@@ -1166,7 +1169,7 @@ td {
     height:115px;
     background:#fff;
     border: 1px solid #e2e2e2;
-    border-radius: 3px;
+    border-radius: 5%;
     border-bottom-width: 3px;
     overflow: hidden;
     cursor: pointer;
@@ -1220,9 +1223,9 @@ td {
     top: 2px;
     right: 2px;
     vertical-align: top;
-    color: white;
-    line-height: 13px;
-    background: #7f82ac;
+    color: black;
+    line-height: 15px;
+    background: #ffa500;
     padding: 2px 5px;
     border-radius: 2px;
 }
@@ -1238,7 +1241,7 @@ td {
     padding: 1px;
     width: 15px;
     height: 15px;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;}
 
@@ -1469,16 +1472,14 @@ td {
 }
 .pos .payment-numpad .numpad {
     border-radius: 4px;
-    border-top: 1px solid;
-    border-left: 1px solid;
     border-color: #cacaca;
-    width: 296px;
+    width: 300px;
     height: 100%;
     margin: auto;
 }
 .pos .payment-numpad .numpad button {
     width: 74px;
-    height: 74px;
+    height: 73px;
 }
 .pos .payment-numpad .numpad button:first-child {
     border-top-left-radius: 4px;
@@ -1573,6 +1574,15 @@ td {
 .payment-screen .payment-buttons .button:hover {
     background-color: #efefef;
 }
+
+.payment-screen .payment-note {
+    margin-top: 5px;
+    padding-left: 30px;
+    text-align: center;
+    font-size: 14px;
+    font-style: italic;
+}
+
 .payment-screen .payment-buttons .button:first-child {
     border-top-left-radius: 3px;
     border-top-right-radius: 3px;
@@ -2052,7 +2062,7 @@ td {
     top: 0px;
     width:100%;
     height: 100%;
-    background: white;
+    background: rgb(254, 168, 40, 0.01);
     flex-grow: 1;
     overflow: hidden;
     overflow-y: auto;
@@ -2065,12 +2075,12 @@ td {
 }
 
 .pos .order{
-    background: white;
+    background: none;
     padding-bottom: 8px;
     padding-top: 8px;
     font-size: 16px;
     text-align: left; 
-    max-width: 650px;
+    max-width: 100%;
     -webkit-transform: translate3d(0,0,0);
 }
 
@@ -2153,7 +2163,7 @@ td {
             transition: background 250ms ease-in-out;
 }
 .pos .order .orderline:active{
-    background: rgba(140,143,183,0.05);
+    background: rgba(255,168,0,0.05);
     -webkit-transition: background 50ms ease-in-out;
        -moz-transition: background 50ms ease-in-out;
             transition: background 50ms ease-in-out;
@@ -2164,7 +2174,7 @@ td {
 }
 
 .pos .order .orderline.selected{
-    background: rgba(140,143,183,0.2);
+    background: rgba(0, 87, 255, 0.25);
     -webkit-transition: background 250ms ease-in-out;
        -moz-transition: background 250ms ease-in-out;
             transition: background 250ms ease-in-out;
@@ -2526,7 +2536,7 @@ td {
 }
 
 .pos .popup .title {
-    background: rgba(255,255,255,0.5);
+    background: rgba(255,168,0,0.5);
     margin: 0;
     padding: 20px;
     border-radius: 3px 3px 0px 0px;
@@ -3069,7 +3079,7 @@ td {
 
 .pos .orders .order-row:hover, .pos .orders .order-row.highlight {
     color: white;
-    background-color:  rgb(110,200,155);
+    background-color:  rgb(0,87,255, 0.5);
 }
 
 .pos .orders .col {
@@ -3145,9 +3155,10 @@ td {
 }
 
 .ticket-screen .controls button.highlight {
-    background: #6EC89B;
-    border: solid 1px #64AF8A;
+    background: #0057ff;
+    border: solid 1px #FFFFFF;
     color: white;
+    display: none;
 }
 
 .ticket-screen .pos-search-bar {
@@ -3386,8 +3397,8 @@ td {
     height: 30px;
     border: none;
     color: #63717f;
-    padding-left: 38px;
-    padding-right: 38px;
+    padding-left: 10%;
+    padding-right: 10%;
     border-radius: 5px;
 }
 
@@ -3621,6 +3632,68 @@ td {
 }
 
 .cash-move .error-message {
+    color: rgb(197, 52, 0);
+    text-align: left;
+    padding-left: 5px;
+}
+
+
+/** Add Product Popup **/
+
+.add-product-popup {
+    display: flex;
+    flex-flow: column;
+}
+
+.add-product-popup .input-name {
+    display: flex;
+    flex-flow: row;
+    vertical-align: middle;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.add-product-popup .input-name .input-type {
+    height: 40px;
+    line-height:40px;
+    text-align:center;
+    border-radius: 2px;
+    padding: 0 12px;
+    margin-right: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    border: solid 1px rgba(60,60,60,0.5);
+    background: rgba(0,0,0,0.05);
+    white-space: nowrap;
+}
+
+.add-product-popup .input-name .input-name.highlight {
+    background: #0057ff !important;
+    border: solid 1px #325afc !important;
+    color: white !important;
+}
+
+.add-product-popup .input-name input {
+    width: 300px;
+    min-height: auto;
+    text-align: right;
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.add-product-popup .input-name .input-field span.currency {
+    position: relative;
+    left: -20px;
+}
+
+.add-product-popup textarea {
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.add-product-popup .error-message {
     color: rgb(197, 52, 0);
     text-align: left;
     padding-left: 5px;

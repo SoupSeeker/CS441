@@ -796,7 +796,7 @@ td {
     border-top: none; /*change from 1px solide*/
     border-color: #bfbfbf;
     border-top-right-radius: 4px;
-    min-width: 216px;
+    min-width: 240px; /*change from 216px*/
 }
 .pos .numpad button {
     /*float: left/*rtl:ignore*/ /* rtlcss forced to keep ltr */
@@ -811,8 +811,14 @@ td {
     border-bottom: 1px solid;
     border-color: #bfbfbf;
     transition: all 150ms linear;
-    margin-left: 1px;
+    margin-bottom: 3px; /*change from nothing*/
 
+}
+
+.pos .numpad .divider { /*change from nothing*/
+    width:6px;
+    display:inline-block;
+    height: 20px;
 }
 .pos .numpad button:hover {
     background: #efefef;
@@ -822,7 +828,7 @@ td {
     color: white;
     border-color: transparent;
 }
-.pos .numpad button:nth-child(4) {
+.pos .numpad button:nth-child(7) { /*change from 4*/
     border-top-right-radius: 4px;
 }
 .pos .numpad button:last-child {
@@ -839,6 +845,7 @@ td {
     background: orange;
     border-color: transparent;
 }
+
 .pos .mode-button.selected-mode:hover {
     background: #6EC89B;
     color: white;

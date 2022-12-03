@@ -27,7 +27,7 @@ odoo.define('nemo_pos.AddProductPopup', function(require) {
             this.inputBarcodeRef = owl.hooks.useRef('product-barcode-ref');
             this.inputPriceRef = owl.hooks.useRef('product-price-ref');
         }
-        confirm() {
+        async confirm() {
             if(this.state.inputName == ''){
                 this.state.inputHasError = true;
                 this.errorMessage = this.env._t('No name provided');
@@ -50,6 +50,13 @@ odoo.define('nemo_pos.AddProductPopup', function(require) {
                 this.errorMessage = this.env._t('Invalid price');
                 return;
             }
+
+
+            await this.rpc({
+                model: 'product.template',
+                method: 'create',
+                args: [{"available_in_pos": true, "barcode" : `${this.state.inputBarcode}`, "categ_id" : "9", "default_code" : "1", "list_price" : `${this.state.inputPrice}`, "name" : `${this.state.inputName}`, "pos_categ_id" : 1, "standard_price" : "1", "type" : "consu"}]
+                });
 
             return super.confirm();
         }

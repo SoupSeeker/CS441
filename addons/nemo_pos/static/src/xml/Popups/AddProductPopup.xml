@@ -8,6 +8,16 @@
                         Add Product
                     </header>
                         <main class="body">
+                            <div class="client-picture">
+                                <t t-if="partnerImageUrl">
+                                <img t-att-src="partnerImageUrl" alt="Partner"
+                                style="width: 64px; height: 64px; object-fit: cover;" />
+                                </t>
+                                <t t-else="">
+                                <i class="fa fa-camera" role="img" aria-label="Picture" title="Picture"></i>
+                                </t>
+                                <input type="file" class="image-uploader" t-on-change="uploadImage" />
+                            </div>
                             <div class="input-name">
                                 Product Name:
                                 <input type="text" name="productName" t-model="state.inputName" t-ref="product-name-ref"/>

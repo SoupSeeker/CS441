@@ -796,11 +796,7 @@ td {
     border-top: none; /*change from 1px solide*/
     border-color: #bfbfbf;
     border-top-right-radius: 4px;
-<<<<<<< HEAD
-    min-width: 240px; /*change from 216px*/
-=======
     min-width: 30%;
->>>>>>> main
 }
 .pos .numpad button {
     /*float: left/*rtl:ignore*/ /* rtlcss forced to keep ltr */
@@ -810,28 +806,18 @@ td {
     vertical-align: middle;
     color: #555555;
     border-radius: 50%; /*change from 0*/
-<<<<<<< HEAD
-    border: thin solid black; /*change from none -- thin*/
-=======
     border: thin solid white; /*change from none -- thin*/
->>>>>>> main
     border-right: 1px solid;
     border-bottom: 1px solid;
     border-color: #bfbfbf;
     transition: all 150ms linear;
-<<<<<<< HEAD
     margin-bottom: 3px; /*change from nothing*/
-
 }
 
 .pos .numpad .divider { /*change from nothing*/
     width:6px;
     display:inline-block;
     height: 20px;
-=======
-    margin-left: 1px;
-
->>>>>>> main
 }
 .pos .numpad button:hover {
     background: #efefef;

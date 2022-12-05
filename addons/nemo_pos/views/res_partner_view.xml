@@ -16,7 +16,7 @@
                     </button>
                 </div>
                 <xpath expr="//group[@name='purchase']" position="after">
-                    <group string="Point Of Sale" name="nemo_pos">
+                    <group string="Nemo Point Of Sale" name="nemo_pos">
                         <field name="barcode"/>
                     </group>
                 </xpath>

@@ -24,7 +24,7 @@ class PosSession(models.Model):
     company_id = fields.Many2one('res.company', related='config_id.company_id', string="Company", readonly=True)
 
     config_id = fields.Many2one(
-        'pos.config', string='Point of Sale',
+        'pos.config', string='Nemo Point of Sale',
         help="The physical point of sale you will use.",
         required=True,
         index=True)

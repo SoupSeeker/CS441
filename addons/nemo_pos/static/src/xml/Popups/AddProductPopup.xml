@@ -8,7 +8,6 @@
                         Add Product
                     </header>
                         <main class="body">
-                            <iframe src="http://localhost:8069"></iframe>
                             <div class="input-name">
                                 Product Name:
                                 <input type="text" name="productName" t-model="state.inputName" t-ref="product-name-ref"/>

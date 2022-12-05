@@ -109,9 +109,7 @@
                         </t>
                     </div>
                 </div>
-
                 <div class="rightpane"> <!-- Had to switch leftpane for rightpane -->
-
                     <t t-set="_selectedSyncedOrder" t-value="getSelectedSyncedOrder()" />
                     <t t-set="_selectedOrderlineId" t-value="getSelectedOrderlineId()" />
                     <OrderDetails order="_selectedSyncedOrder" selectedOrderlineId="_selectedOrderlineId" highlightHeaderNote="_state.ui.highlightHeaderNote" />

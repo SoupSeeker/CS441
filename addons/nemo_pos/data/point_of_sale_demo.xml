@@ -24,8 +24,8 @@
         <record id="pos_category_miscellaneous" model="pos.category">
           <field name="name">Miscellaneous</field>
         </record>
-        <record id="pos_category_desks" model="pos.category">
-          <field name="name">Desks</field>
+        <record id="pos_category_food" model="pos.category">
+          <field name="name">Food</field>
         </record>
         <record id="pos_category_chairs" model="pos.category">
           <field name="name">Chairs</field>
@@ -42,7 +42,7 @@
         </record>
         <record id="wall_shelf" model="product.product">
           <field name="available_in_pos">True</field>
-          <field name="list_price">1.98</field>
+          <field name="list_price">5.98</field>
           <field name="name">Wall Shelf Unit</field>
           <field name="default_code">FURN_0009</field>
           <field name="type">product</field>
@@ -290,15 +290,15 @@
         </record>
         <record id="product.product_product_3" model="product.product">
           <field name="available_in_pos" eval="True"/>
-          <field name="pos_categ_id" ref="pos_category_desks"/>
+          <field name="pos_categ_id" ref="pos_category_food"/>
         </record>
         <record id="product.product_product_4_product_template" model="product.template">
           <field name="available_in_pos" eval="True"/>
-          <field name="pos_categ_id" ref="pos_category_desks"/>
+          <field name="pos_categ_id" ref="pos_category_food"/>
         </record>
         <record id="product.product_product_5" model="product.product">
           <field name="available_in_pos" eval="True"/>
-          <field name="pos_categ_id" ref="pos_category_desks"/>
+          <field name="pos_categ_id" ref="pos_category_food"/>
         </record>
         <record id="product.product_product_6" model="product.product">
           <field name="available_in_pos" eval="True"/>
@@ -310,7 +310,7 @@
         </record>
         <record id="product.product_product_8" model="product.product">
           <field name="available_in_pos" eval="True"/>
-          <field name="pos_categ_id" ref="pos_category_desks"/>
+          <field name="pos_categ_id" ref="pos_category_food"/>
         </record>
         <record id="product.product_product_9" model="product.product">
           <field name="available_in_pos" eval="True"/>
@@ -334,7 +334,7 @@
         </record>
         <record id="product.product_product_13" model="product.product">
           <field name="available_in_pos" eval="True"/>
-          <field name="pos_categ_id" ref="pos_category_desks"/>
+          <field name="pos_categ_id" ref="pos_category_food"/>
         </record>
         <record id="product.product_product_16" model="product.product">
           <field name="available_in_pos" eval="True"/>
@@ -362,7 +362,7 @@
         </record>
         <record id="product.consu_delivery_03" model="product.product">
           <field name="available_in_pos" eval="True"/>
-          <field name="pos_categ_id" ref="pos_category_desks"/>
+          <field name="pos_categ_id" ref="pos_category_food"/>
         </record>
         <record id="product.consu_delivery_02" model="product.product">
           <field name="available_in_pos" eval="True"/>

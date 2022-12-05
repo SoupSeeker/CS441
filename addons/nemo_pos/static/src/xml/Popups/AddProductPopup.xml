@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="AddProductPopup" owl="1">
+        <div role="dialog" class="modal-dialog">
+            <div class="popup">
+                <div class="add-product-popup">
+                    <header class="title">
+                        Add Product
+                    </header>
+                        <main class="body">
+                            <iframe src="http://localhost:8069"></iframe>
+                            <div class="input-name">
+                                Product Name:
+                                <input type="text" name="productName" t-model="state.inputName" t-ref="product-name-ref"/>
+                            </div>
+                            <div class="input-name">
+                                Barcode:
+                                <input type="text" name="productBarcode" t-model="state.inputBarcode" t-ref="product-barcode-ref"/>
+                            </div>
+                            <div class="input-name">
+                                Price:
+                                <input type="text" name="productPrice" t-model="state.inputPrice" t-ref="product-price-ref"/>
+                            </div>
+
+                            <div>
+                                <span t-if="state.inputHasError" class="error-message">
+                                    <t t-esc="errorMessage"/>
+                                </span>
+                            </div>
+
+                        </main>
+                        <footer class="footer">
+                        <div class="button confirm disable" t-on-click="confirm">
+                            Confirm
+                        </div>
+                            <div class="button cancel" t-on-click="cancel">
+                            Cancel
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </div>
+    </t>
+</templates>

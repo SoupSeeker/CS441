@@ -811,8 +811,13 @@ td {
     border-bottom: 1px solid;
     border-color: #bfbfbf;
     transition: all 150ms linear;
-    margin-left: 1px;
+    margin-bottom: 3px; /*change from nothing*/
+}
 
+.pos .numpad .divider { /*change from nothing*/
+    width:6px;
+    display:inline-block;
+    height: 20px;
 }
 .pos .numpad button:hover {
     background: #efefef;
@@ -840,6 +845,7 @@ td {
     background: orange;
     border-color: transparent;
 }
+
 .pos .mode-button.selected-mode:hover {
     background: #0057ff;
     color: white;
@@ -3372,7 +3378,7 @@ td {
 }
 
 .cash-move-button:hover {
-    background: rgb(104,69,95);
+    background: rgb(0, 87, 255);
     cursor: pointer;
 }
 
@@ -3567,7 +3573,7 @@ td {
 }
 
 .pos .pos-topheader .status-buttons > div:hover {
-    background: rgb(104,69,95);
+    background: rgb(0, 87, 255, 0.25);
 }
 
 @media screen and (max-width: 768px) {

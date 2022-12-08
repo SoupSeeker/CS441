@@ -39,7 +39,7 @@
                     <field name="has_active_session" invisible="1"/>
                     <div class="oe_title" id="title">
                         <label for="name"/>
-                        <h1><field name="name" placeholder="e.g. NYC Shop"/></h1>
+                        <h1><field name="name" placeholder="e.g. Nemo's Shop"/></h1>
                     </div>
                     <div class="o_notification_alert alert alert-warning" attrs="{'invisible':[('has_active_session','=', False)]}" role="alert">
                         A session is currently opened for this PoS. Some settings can only be changed after the session is closed.
@@ -56,6 +56,7 @@
                             </div>
                         </div>
                     </div>
+                    <!--
                     <div class="row mt16 o_settings_container">
                       <div class="col-12 col-lg-6 o_setting_box">
                         <div class="o_setting_left_pane">
@@ -75,6 +76,7 @@
                             <div class="o_setting_left_pane">
                                 <field name="module_pos_hr" attrs="{'readonly': [('has_active_session','=', True)]}"/>
                             </div>
+
                             <div class="o_setting_right_pane" id="login_with_employees">
                                 <span class="o_form_label">Authorized Employees</span>
                                 <div class="text-muted">
@@ -88,6 +90,7 @@
                             </div>
                         </div>
                     </div>
+                     -->
                     <h2 name="order">PoS Interface</h2>
                     <div class="row mt16 o_settings_container">
                         <div class="col-12 col-lg-6 o_setting_box" groups="product.group_product_variant" >
@@ -351,6 +354,7 @@
                                 </div>
                             </div>
                         </div>
+                         <!--
                         <div class="col-xs-12 col-lg-6 o_setting_box" >
                             <div class="o_setting_left_pane">
                                 <field name="module_pos_discount" attrs="{'readonly': [('has_active_session','=', True)]}"/>
@@ -367,6 +371,7 @@
                                 </div>
                             </div>
                         </div>
+                        -->
                         <div class="col-xs-12 col-lg-6 o_setting_box" >
                             <div class="o_setting_left_pane">
                                 <field name="manual_discount"/>
@@ -378,6 +383,7 @@
                                 </div>
                             </div>
                         </div>
+                        <!--
                         <div class="col-12 col-lg-6 o_setting_box" id="pos-loyalty">
                             <div class="o_setting_left_pane">
                                 <field name="module_pos_loyalty" widget="upgrade_boolean" nolabel="1"/>
@@ -394,6 +400,7 @@
                                 </div>
                             </div>
                         </div>
+                        -->
                         <div class="col-12 col-lg-6 o_setting_box price_control" title="Only users with Manager access rights for PoS app can modify the product prices on orders.">
                             <div class="o_setting_left_pane">
                                 <field name="restrict_price_control"/>
